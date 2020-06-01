@@ -1,6 +1,7 @@
-package br.com.erudio.data.vo;
+package br.com.erudio.data.vo2;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 @Builder
 
-public class PersonVO implements Serializable {
+public class PersonVOV2 implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -23,5 +24,6 @@ public class PersonVO implements Serializable {
 	private String lastName;
 	private String address;
 	private String gender;
+	private Date birthDay;
 
 }
