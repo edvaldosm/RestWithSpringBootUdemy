@@ -1,0 +1,101 @@
+31-05-2020 21:51:11.163 [main] INFO  c.g.d.core.util.RuntimeUtils.isOSGi - OSGi support is false
+31-05-2020 21:51:11.177 [main] INFO  c.g.d.core.DozerBeanMapperBuilder.build - Initializing Dozer. Version: 6.5.0, Thread Name: main
+31-05-2020 21:51:11.182 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Trying to find Dozer configuration file: dozer.properties
+31-05-2020 21:51:11.183 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+31-05-2020 21:51:11.197 [main] INFO  c.g.d.core.el.ELExpressionFactory.isSupported - javax.el support is true
+31-05-2020 22:08:32.654 [restartedMain] INFO  br.com.erudio.StartApplication.logStarting - Starting StartApplication on matos with PID 10488 (/home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud/target/classes started by esmatos in /home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud)
+31-05-2020 22:08:32.656 [restartedMain] INFO  br.com.erudio.StartApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+31-05-2020 22:08:32.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+31-05-2020 22:08:32.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+31-05-2020 22:08:33.277 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+31-05-2020 22:08:33.334 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
+31-05-2020 22:08:33.939 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+31-05-2020 22:08:33.944 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+31-05-2020 22:08:33.945 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+31-05-2020 22:08:33.945 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.35]
+31-05-2020 22:08:34.006 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+31-05-2020 22:08:34.007 [restartedMain] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1320 ms
+31-05-2020 22:08:34.151 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+31-05-2020 22:08:34.188 [task-1] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+31-05-2020 22:08:34.245 [task-1] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+31-05-2020 22:08:34.259 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+31-05-2020 22:08:34.355 [task-1] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+31-05-2020 22:08:34.430 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+31-05-2020 22:08:34.858 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+31-05-2020 22:08:34.866 [task-1] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+31-05-2020 22:08:35.477 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+31-05-2020 22:08:35.482 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+31-05-2020 22:08:35.735 [task-2] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+31-05-2020 22:08:35.844 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+31-05-2020 22:08:35.858 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+31-05-2020 22:08:35.860 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Triggering deferred initialization of Spring Data repositories…
+31-05-2020 22:08:35.906 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Spring Data repositories initialized!
+31-05-2020 22:08:35.920 [restartedMain] INFO  br.com.erudio.StartApplication.logStarted - Started StartApplication in 3.584 seconds (JVM running for 4.371)
+31-05-2020 22:11:23.080 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+31-05-2020 22:11:23.081 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+31-05-2020 22:11:23.107 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 26 ms
+31-05-2020 22:11:23.543 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - 
+    select
+        person0_.id as id1_0_0_,
+        person0_.address as address2_0_0_,
+        person0_.first_name as first_na3_0_0_,
+        person0_.gender as gender4_0_0_,
+        person0_.last_name as last_nam5_0_0_ 
+    from
+        person person0_ 
+    where
+        person0_.id=?
+31-05-2020 22:11:23.610 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - 
+    insert 
+    into
+        person
+        (address, first_name, gender, last_name) 
+    values
+        (?, ?, ?, ?)
+31-05-2020 22:11:23.655 [http-nio-8080-exec-2] INFO  c.g.d.core.util.RuntimeUtils.isOSGi - OSGi support is false
+31-05-2020 22:11:23.664 [http-nio-8080-exec-2] INFO  c.g.d.core.DozerBeanMapperBuilder.build - Initializing Dozer. Version: 6.5.0, Thread Name: http-nio-8080-exec-2
+31-05-2020 22:11:23.671 [http-nio-8080-exec-2] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Trying to find Dozer configuration file: dozer.properties
+31-05-2020 22:11:23.673 [http-nio-8080-exec-2] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+31-05-2020 22:11:23.680 [http-nio-8080-exec-2] INFO  c.g.d.core.el.ELExpressionFactory.isSupported - javax.el support is true
+31-05-2020 22:12:08.811 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - 
+    select
+        person0_.id as id1_0_,
+        person0_.address as address2_0_,
+        person0_.first_name as first_na3_0_,
+        person0_.gender as gender4_0_,
+        person0_.last_name as last_nam5_0_ 
+    from
+        person person0_
+31-05-2020 22:13:00.062 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound.handleHttpRequestMethodNotSupported - Request method 'DELETE' not supported
+31-05-2020 22:13:00.064 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+31-05-2020 22:13:29.222 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - 
+    select
+        person0_.id as id1_0_0_,
+        person0_.address as address2_0_0_,
+        person0_.first_name as first_na3_0_0_,
+        person0_.gender as gender4_0_0_,
+        person0_.last_name as last_nam5_0_0_ 
+    from
+        person person0_ 
+    where
+        person0_.id=?
+31-05-2020 22:13:29.236 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - 
+    delete 
+    from
+        person 
+    where
+        id=?
+31-05-2020 22:13:35.255 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - 
+    select
+        person0_.id as id1_0_,
+        person0_.address as address2_0_,
+        person0_.first_name as first_na3_0_,
+        person0_.gender as gender4_0_,
+        person0_.last_name as last_nam5_0_ 
+    from
+        person person0_
+31-05-2020 22:15:21.873 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+31-05-2020 22:15:21.943 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+31-05-2020 22:15:21.946 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+31-05-2020 22:15:21.948 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+31-05-2020 22:15:21.976 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

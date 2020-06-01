@@ -1,101 +1,78 @@
-31-05-2020 21:51:11.163 [main] INFO  c.g.d.core.util.RuntimeUtils.isOSGi - OSGi support is false
-31-05-2020 21:51:11.177 [main] INFO  c.g.d.core.DozerBeanMapperBuilder.build - Initializing Dozer. Version: 6.5.0, Thread Name: main
-31-05-2020 21:51:11.182 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Trying to find Dozer configuration file: dozer.properties
-31-05-2020 21:51:11.183 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-31-05-2020 21:51:11.197 [main] INFO  c.g.d.core.el.ELExpressionFactory.isSupported - javax.el support is true
-31-05-2020 22:08:32.654 [restartedMain] INFO  br.com.erudio.StartApplication.logStarting - Starting StartApplication on matos with PID 10488 (/home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud/target/classes started by esmatos in /home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud)
-31-05-2020 22:08:32.656 [restartedMain] INFO  br.com.erudio.StartApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-31-05-2020 22:08:32.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-31-05-2020 22:08:32.686 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-31-05-2020 22:08:33.277 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-31-05-2020 22:08:33.334 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-31-05-2020 22:08:33.939 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2020 22:08:33.944 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-31-05-2020 22:08:33.945 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2020 22:08:33.945 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.35]
-31-05-2020 22:08:34.006 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2020 22:08:34.007 [restartedMain] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1320 ms
-31-05-2020 22:08:34.151 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2020 22:08:34.188 [task-1] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-31-05-2020 22:08:34.245 [task-1] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
-31-05-2020 22:08:34.259 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-31-05-2020 22:08:34.355 [task-1] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-31-05-2020 22:08:34.430 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-31-05-2020 22:08:34.858 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-31-05-2020 22:08:34.866 [task-1] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-31-05-2020 22:08:35.477 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-31-05-2020 22:08:35.482 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-31-05-2020 22:08:35.735 [task-2] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-31-05-2020 22:08:35.844 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
-31-05-2020 22:08:35.858 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2020 22:08:35.860 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Triggering deferred initialization of Spring Data repositories…
-31-05-2020 22:08:35.906 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Spring Data repositories initialized!
-31-05-2020 22:08:35.920 [restartedMain] INFO  br.com.erudio.StartApplication.logStarted - Started StartApplication in 3.584 seconds (JVM running for 4.371)
-31-05-2020 22:11:23.080 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2020 22:11:23.081 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2020 22:11:23.107 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 26 ms
-31-05-2020 22:11:23.543 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - 
-    select
-        person0_.id as id1_0_0_,
-        person0_.address as address2_0_0_,
-        person0_.first_name as first_na3_0_0_,
-        person0_.gender as gender4_0_0_,
-        person0_.last_name as last_nam5_0_0_ 
-    from
-        person person0_ 
-    where
-        person0_.id=?
-31-05-2020 22:11:23.610 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL.logStatement - 
-    insert 
-    into
-        person
-        (address, first_name, gender, last_name) 
-    values
-        (?, ?, ?, ?)
-31-05-2020 22:11:23.655 [http-nio-8080-exec-2] INFO  c.g.d.core.util.RuntimeUtils.isOSGi - OSGi support is false
-31-05-2020 22:11:23.664 [http-nio-8080-exec-2] INFO  c.g.d.core.DozerBeanMapperBuilder.build - Initializing Dozer. Version: 6.5.0, Thread Name: http-nio-8080-exec-2
-31-05-2020 22:11:23.671 [http-nio-8080-exec-2] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Trying to find Dozer configuration file: dozer.properties
-31-05-2020 22:11:23.673 [http-nio-8080-exec-2] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
-31-05-2020 22:11:23.680 [http-nio-8080-exec-2] INFO  c.g.d.core.el.ELExpressionFactory.isSupported - javax.el support is true
-31-05-2020 22:12:08.811 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL.logStatement - 
-    select
-        person0_.id as id1_0_,
-        person0_.address as address2_0_,
-        person0_.first_name as first_na3_0_,
-        person0_.gender as gender4_0_,
-        person0_.last_name as last_nam5_0_ 
-    from
-        person person0_
-31-05-2020 22:13:00.062 [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound.handleHttpRequestMethodNotSupported - Request method 'DELETE' not supported
-31-05-2020 22:13:00.064 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
-31-05-2020 22:13:29.222 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - 
-    select
-        person0_.id as id1_0_0_,
-        person0_.address as address2_0_0_,
-        person0_.first_name as first_na3_0_0_,
-        person0_.gender as gender4_0_0_,
-        person0_.last_name as last_nam5_0_0_ 
-    from
-        person person0_ 
-    where
-        person0_.id=?
-31-05-2020 22:13:29.236 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL.logStatement - 
-    delete 
-    from
-        person 
-    where
-        id=?
-31-05-2020 22:13:35.255 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL.logStatement - 
-    select
-        person0_.id as id1_0_,
-        person0_.address as address2_0_,
-        person0_.first_name as first_na3_0_,
-        person0_.gender as gender4_0_,
-        person0_.last_name as last_nam5_0_ 
-    from
-        person person0_
-31-05-2020 22:15:21.873 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-31-05-2020 22:15:21.943 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-31-05-2020 22:15:21.946 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-31-05-2020 22:15:21.948 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-31-05-2020 22:15:21.976 [RMI TCP Connection(4)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+01-06-2020 17:47:38.834 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.erudio.StartApplicationTests], using SpringBootContextLoader
+01-06-2020 17:47:38.855 [main] INFO  o.s.t.c.s.AbstractContextLoader.generateDefaultLocations - Could not detect default resource locations for test class [br.com.erudio.StartApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01-06-2020 17:47:38.856 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [br.com.erudio.StartApplicationTests]: StartApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01-06-2020 17:47:39.130 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses - Found @SpringBootConfiguration br.com.erudio.StartApplication for test class br.com.erudio.StartApplicationTests
+01-06-2020 17:47:39.244 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01-06-2020 17:47:39.264 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57abad67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@550a1967, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a640157, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@52851b44, org.springframework.test.context.support.DirtiesContextTestExecutionListener@584f54e6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d8bafa9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@576f63f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@2dca0d64, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@f80945f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ff684e1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6e35bc3d]
+01-06-2020 17:47:39.816 [main] INFO  br.com.erudio.StartApplicationTests.logStarting - Starting StartApplicationTests on matos with PID 14254 (started by esmatos in /home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud)
+01-06-2020 17:47:39.818 [main] INFO  br.com.erudio.StartApplicationTests.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+01-06-2020 17:47:40.908 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+01-06-2020 17:47:41.032 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 76ms. Found 1 JPA repository interfaces.
+01-06-2020 17:47:41.533 [main] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.1 by Redgate
+01-06-2020 17:47:41.926 [main] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:mysql://192.168.199.131:3306/ (MySQL 8.0)
+01-06-2020 17:47:41.971 [main] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 2 migrations (execution time 00:00.020s)
+01-06-2020 17:47:42.020 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory.info - Creating Schema History table `rest_with_spring_boot_udemy`.`flyway_schema_history` ...
+01-06-2020 17:47:42.126 [main] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema `rest_with_spring_boot_udemy`: << Empty Schema >>
+01-06-2020 17:47:42.134 [main] INFO  o.f.core.internal.command.DbMigrate.info - Migrating schema `rest_with_spring_boot_udemy` to version 1 - Create Table Person
+01-06-2020 17:47:42.155 [main] WARN  o.f.c.i.s.DefaultSqlScriptExecutor.warn - DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+01-06-2020 17:47:42.202 [main] INFO  o.f.core.internal.command.DbMigrate.info - Migrating schema `rest_with_spring_boot_udemy` to version 2 - Populate Table Person
+01-06-2020 17:47:42.237 [main] INFO  o.f.core.internal.command.DbMigrate.info - Successfully applied 2 migrations to schema `rest_with_spring_boot_udemy` (execution time 00:00.122s)
+01-06-2020 17:47:42.387 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+01-06-2020 17:47:42.497 [task-1] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+01-06-2020 17:47:42.637 [task-1] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+01-06-2020 17:47:42.822 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-06-2020 17:47:42.943 [task-1] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+01-06-2020 17:47:43.087 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-06-2020 17:47:43.127 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-06-2020 17:47:43.173 [task-1] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+01-06-2020 17:47:43.819 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01-06-2020 17:47:43.826 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-06-2020 17:47:44.482 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Triggering deferred initialization of Spring Data repositories…
+01-06-2020 17:47:44.535 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Spring Data repositories initialized!
+01-06-2020 17:47:44.546 [main] INFO  br.com.erudio.StartApplicationTests.logStarted - Started StartApplicationTests in 5.197 seconds (JVM running for 6.805)
+01-06-2020 17:47:44.802 [main] INFO  c.g.d.core.util.RuntimeUtils.isOSGi - OSGi support is false
+01-06-2020 17:47:44.821 [main] INFO  c.g.d.core.DozerBeanMapperBuilder.build - Initializing Dozer. Version: 6.5.0, Thread Name: main
+01-06-2020 17:47:44.835 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Trying to find Dozer configuration file: dozer.properties
+01-06-2020 17:47:44.835 [main] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver.processFile - Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+01-06-2020 17:47:44.853 [main] INFO  c.g.d.core.el.ELExpressionFactory.isSupported - javax.el support is true
+01-06-2020 17:47:44.981 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+01-06-2020 17:47:44.983 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+01-06-2020 17:47:44.984 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+01-06-2020 17:47:45.005 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+01-06-2020 17:48:13.958 [restartedMain] INFO  br.com.erudio.StartApplication.logStarting - Starting StartApplication on matos with PID 14520 (/home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud/target/classes started by esmatos in /home/esmatos/CursoSpring/springAWS/RestWithSpringBootUdemy/03 ProjetoCrud)
+01-06-2020 17:48:13.963 [restartedMain] INFO  br.com.erudio.StartApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+01-06-2020 17:48:14.005 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+01-06-2020 17:48:14.006 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+01-06-2020 17:48:14.682 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+01-06-2020 17:48:14.730 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 43ms. Found 1 JPA repository interfaces.
+01-06-2020 17:48:15.231 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+01-06-2020 17:48:15.238 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+01-06-2020 17:48:15.238 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-06-2020 17:48:15.239 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.35]
+01-06-2020 17:48:15.306 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+01-06-2020 17:48:15.306 [restartedMain] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1300 ms
+01-06-2020 17:48:15.408 [restartedMain] INFO  o.f.c.i.license.VersionPrinter.info - Flyway Community Edition 6.4.1 by Redgate
+01-06-2020 17:48:15.679 [restartedMain] INFO  o.f.c.i.database.DatabaseFactory.info - Database: jdbc:mysql://192.168.199.131:3306/ (MySQL 8.0)
+01-06-2020 17:48:15.721 [restartedMain] INFO  o.f.core.internal.command.DbValidate.info - Successfully validated 2 migrations (execution time 00:00.021s)
+01-06-2020 17:48:15.736 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Current version of schema `rest_with_spring_boot_udemy`: 2
+01-06-2020 17:48:15.738 [restartedMain] INFO  o.f.core.internal.command.DbMigrate.info - Schema `rest_with_spring_boot_udemy` is up to date. No migration necessary.
+01-06-2020 17:48:15.847 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+01-06-2020 17:48:15.897 [task-1] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+01-06-2020 17:48:15.951 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01-06-2020 17:48:15.953 [task-1] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.15.Final
+01-06-2020 17:48:16.073 [task-1] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+01-06-2020 17:48:16.179 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+01-06-2020 17:48:16.218 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+01-06-2020 17:48:16.230 [task-1] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+01-06-2020 17:48:16.643 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01-06-2020 17:48:16.648 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01-06-2020 17:48:16.875 [task-2] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+01-06-2020 17:48:16.979 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+01-06-2020 17:48:16.992 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+01-06-2020 17:48:16.993 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Triggering deferred initialization of Spring Data repositories…
+01-06-2020 17:48:17.036 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Spring Data repositories initialized!
+01-06-2020 17:48:17.042 [restartedMain] INFO  br.com.erudio.StartApplication.logStarted - Started StartApplication in 3.513 seconds (JVM running for 4.046)
+01-06-2020 17:50:26.624 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+01-06-2020 17:50:26.627 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+01-06-2020 17:50:26.629 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+01-06-2020 17:50:26.659 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
