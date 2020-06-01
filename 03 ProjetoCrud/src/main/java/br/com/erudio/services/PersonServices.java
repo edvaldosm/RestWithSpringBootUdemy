@@ -1,49 +1,57 @@
 package br.com.erudio.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.erudio.model.Person;
+import br.com.erudio.converter.DozerConverter;
+import br.com.erudio.data.model.Person;
+import br.com.erudio.data.vo.PersonVO;
+import br.com.erudio.exception.ResourceNotFoundException;
+import br.com.erudio.repository.PersonRepository;
 
 @Service
 public class PersonServices {
 
-	private final AtomicLong atomic = new AtomicLong();
+	@Autowired
+	private PersonRepository repository;
 
-	public Person findById(String id) {
-		return mockPerson(Integer.parseInt(id));
+	public PersonVO create(PersonVO person) {
+		var entity = DozerConverter.parseObject(person, Person.class);
+		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+
+		return vo;
 	}
 
-	public List<Person> findAll() {
-		List<Person> persons = new ArrayList<Person>();
-		for (int i = 0; i < 8; i++) {
-			persons.add(mockPerson(i));
-		}
-		return persons;
+	public List<PersonVO> findAll() {
+		return DozerConverter.parseListObjects(repository.findAll(), PersonVO.class);
 
 	}
 
-	public Person create(Person person) {
-		person.setId(atomic.incrementAndGet());
-		return person;
+	public PersonVO findById(Long id) {
+		var vo = DozerConverter.parseObject(
+				repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Registro nao encontrado")),
+				PersonVO.class);
+		return vo;
 	}
-	
-	public Person update(Person person) {
-		return person;
-	}
-	
-	public void delete(String id) {
+
+	public PersonVO update(PersonVO person) {
 		
+		Person entity = repository.findById(person.getId())
+				.orElseThrow(() -> new ResourceNotFoundException("Registro nao encontrado"));
+		entity = Person.builder().firstName(person.getFirstName()).lastName(person.getLastName())
+				.address(person.getAddress()).gender(person.getGender()).build();
+
+		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+		return vo;
+
 	}
 
-	private Person mockPerson(int i) {
-
-		Person p = Person.builder().id(atomic.incrementAndGet()).firstName("Primeiro nome " + i)
-				.lastName("Último nome  " + i).address("Rua XXXX - Osasco - SP nro " + i)
-				.gender(i % 2 == 0 ? "Male" : "Feme").build();
-		return p;
+	public void delete(Long id) {
+		Person entity = repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("Registro nao encontrado"));
+		repository.delete(entity);
 	}
+
 }
