@@ -66,6 +66,15 @@
 			<artifactId>dozer-core</artifactId>
 			<version>6.5.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>		
+		
 	</dependencies>
 
 	<build>

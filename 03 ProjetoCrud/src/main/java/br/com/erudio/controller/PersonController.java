@@ -14,42 +14,42 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.erudio.data.vo.PersonVO;
-import br.com.erudio.data.vo2.PersonVOV2;
 import br.com.erudio.services.PersonServices;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 
 	@Autowired
 	private PersonServices services;
 
-	@GetMapping
+	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
 	public List<PersonVO> findAll() {
 		return services.findAll();
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping(value = "/{id}", produces = { "application/json", "application/xml", "application/x-yaml" })
 	public PersonVO findById(@PathVariable("id") Long id) {
 		return services.findById(id);
 	}
 
-	@PostMapping
+	@PostMapping(produces = { "application/json", "application/xml", "application/x-yaml" }, consumes = {
+			"application/json", "application/xml", "application/x-yaml" })
 	public PersonVO create(@RequestBody PersonVO person) {
 		return services.create(person);
 	}
-	
-	@PostMapping("/v2")
-	public PersonVOV2 createV2(@RequestBody PersonVOV2 person) {
-		return services.createV2(person);
-	}
 
-	@PutMapping
+	/*
+	 * @PostMapping("/v2") public PersonVOV2 createV2(@RequestBody PersonVOV2
+	 * person) { return services.createV2(person); }
+	 */
+	@PutMapping(produces = { "application/json", "application/xml", "application/x-yaml" }, consumes = {
+			"application/json", "application/xml", "application/x-yaml" })
 	public PersonVO update(@RequestBody PersonVO person) {
 		return services.update(person);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id) {
 		services.delete(id);
 		return ResponseEntity.ok().build();
