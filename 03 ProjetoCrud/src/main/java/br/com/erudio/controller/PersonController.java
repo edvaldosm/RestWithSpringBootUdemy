@@ -23,6 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 //@Api(value = "Person EndPoint", description = "Description for person", tags = { "PersonEndPoint" })
+//@CrossOrigin()
 @Api(tags = "PersonEndPoint")
 @RestController
 @RequestMapping("/api/person/v1")
@@ -31,6 +32,7 @@ public class PersonController {
 	@Autowired
 	private PersonServices services;
 
+	//@CrossOrigin()  - Exemplo de Cross Dominio.
 	@ApiOperation(value = "Find all people recorded")
 	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
 	public List<PersonVO> findAll() {
