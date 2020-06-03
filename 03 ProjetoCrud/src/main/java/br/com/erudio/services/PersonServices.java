@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.erudio.converter.DozerConverter;
 import br.com.erudio.converter.custom.PersonConverter;
@@ -57,6 +58,15 @@ public class PersonServices {
 		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
 		return vo;
 
+	}
+	
+	@Transactional
+	public PersonVO disablePerson(Long id) {
+		repository.disablePersons(id);
+		var vo = DozerConverter.parseObject(
+				repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Registro nao encontrado")),
+				PersonVO.class);
+		return vo;
 	}
 
 	public void delete(Long id) {

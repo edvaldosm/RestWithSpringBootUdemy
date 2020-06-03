@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.erudio.repository.UserRepository;
 
-@Service
+@Service("userServices")
 public class UserServices implements UserDetailsService {
 
 	@Autowired

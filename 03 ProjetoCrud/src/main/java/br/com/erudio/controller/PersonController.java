@@ -10,6 +10,7 @@ import org.springframework.hateoas.Link;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -80,6 +81,17 @@ public class PersonController {
 		return p;
 	}
 
+	@ApiOperation(value = "Update field enable to disable by ID person")
+	@PatchMapping(value = "/{id}", produces = { "application/json", "application/xml", "application/x-yaml" })
+	public PersonVO disable(@PathVariable("id") Long id) {
+
+		PersonVO person = services.disablePerson(id);
+		Link link = linkTo(methodOn(PersonController.class).findById(id)).withSelfRel();
+		person.add(link);
+
+		return person;
+	}
+	
 	@ApiOperation(value = "Delete person in DB")
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id) {
