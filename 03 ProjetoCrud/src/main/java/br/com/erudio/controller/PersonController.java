@@ -3,10 +3,16 @@ package br.com.erudio.controller;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.Link;
+import org.springframework.hateoas.RepresentationModel;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.erudio.data.vo.PersonVO;
@@ -33,17 +40,70 @@ public class PersonController {
 	@Autowired
 	private PersonServices services;
 
-	//@CrossOrigin()  - Exemplo de Cross Dominio.
+	@Autowired
+	private PagedResourcesAssembler<PersonVO> assembler;
+
+	/*
+	 * //@CrossOrigin() - Exemplo de Cross Dominio.
+	 * 
+	 * @ApiOperation(value = "Find all people recorded")
+	 * 
+	 * @GetMapping(produces = { "application/json", "application/xml",
+	 * "application/x-yaml" }) public List<PersonVO> findAll() { List<PersonVO>
+	 * persons = services.findAll(); persons.stream().forEach(p -> { Link link =
+	 * linkTo(methodOn(PersonController.class).findById(p.getId())).withSelfRel();
+	 * p.add(link); });
+	 * 
+	 * return persons; }
+	 */
+	
+	
+
 	@ApiOperation(value = "Find all people recorded")
-	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
-	public List<PersonVO> findAll() {
-		List<PersonVO> persons = services.findAll();
+	@GetMapping(value = "/findPersonByName/{firstName}", produces = { "application/json", "application/xml", "application/x-yaml" })
+	public ResponseEntity<RepresentationModel<?>> findPersonByName(
+			@PathVariable("firstName") String firstName,
+			@RequestParam(value = "page", defaultValue = "0") int page,
+			@RequestParam(value = "limit", defaultValue = "12") int limit,
+			@RequestParam(value = "direction", defaultValue = "asc") String direction) {
+
+		var sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+
+		Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "firstName"));
+
+		Page<PersonVO> persons = services.findPersonByName(firstName, pageable);
 		persons.stream().forEach(p -> {
 			Link link = linkTo(methodOn(PersonController.class).findById(p.getId())).withSelfRel();
 			p.add(link);
 		});
 
-		return persons;
+		RepresentationModel<?> resources = assembler.toModel(persons);
+
+		return new ResponseEntity<RepresentationModel<?>>(resources, HttpStatus.OK);
+	}
+	
+	
+	
+
+	@ApiOperation(value = "Find all people recorded")
+	@GetMapping(produces = { "application/json", "application/xml", "application/x-yaml" })
+	public ResponseEntity<RepresentationModel<?>> findAll(@RequestParam(value = "page", defaultValue = "0") int page,
+			@RequestParam(value = "limit", defaultValue = "12") int limit,
+			@RequestParam(value = "direction", defaultValue = "asc") String direction) {
+
+		var sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+
+		Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "firstName"));
+
+		Page<PersonVO> persons = services.findAll(pageable);
+		persons.stream().forEach(p -> {
+			Link link = linkTo(methodOn(PersonController.class).findById(p.getId())).withSelfRel();
+			p.add(link);
+		});
+
+		RepresentationModel<?> resources = assembler.toModel(persons);
+
+		return new ResponseEntity<RepresentationModel<?>>(resources, HttpStatus.OK);
 	}
 
 	@ApiOperation(value = "Find by ID person")
@@ -91,7 +151,7 @@ public class PersonController {
 
 		return person;
 	}
-	
+
 	@ApiOperation(value = "Delete person in DB")
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id) {
